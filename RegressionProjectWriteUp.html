@@ -491,14 +491,8 @@ indicates they look reasonably close to normally distributed in the left
 tail, however with some probability mass distributed differently in the
 right tail (plot generation code int he Appendix).</p></li>
 </ol>
-<pre class="r"><code>library(lmtest)</code></pre>
-<pre><code>## Loading required package: zoo</code></pre>
-<pre><code>## 
-## Attaching package: &#39;zoo&#39;</code></pre>
-<pre><code>## The following objects are masked from &#39;package:base&#39;:
-## 
-##     as.Date, as.Date.numeric</code></pre>
-<pre class="r"><code>sprintf(&quot;BP Test p-value: %.2f; SW Test p-value: %.2f &quot;, bptest(mymodel)$p.value, 
+<pre class="r"><code>library(lmtest)
+sprintf(&quot;BP Test p-value: %.2f; SW Test p-value: %.2f &quot;, bptest(mymodel)$p.value, 
         shapiro.test(mymodel$residuals)$p.value) </code></pre>
 <pre><code>## [1] &quot;BP Test p-value: 0.69; SW Test p-value: 0.09 &quot;</code></pre>
 <div class="figure">

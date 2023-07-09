@@ -101,7 +101,7 @@ This section provides a closer look at residuals for the selected model. In part
 
 (b) Are the residuals normally distributed? Shapiro-Wilk test shows p-value of ab. 0.09, which allows to reject the null hypothesis (that the model residuals are normally distributed) at 90% confidence level, but not at 95%, which is not very conclusive. QQ-plot of the residuals indicates they look reasonably close to normally distributed in the left tail, however with some probability mass distributed differently in the right tail (plot generation code int he Appendix).
 
-```{r residuals, echo=TRUE, cache=TRUE, warning=FALSE}
+```{r residuals, echo=TRUE, cache=TRUE, warning=FALSE, message=FALSE}
 library(lmtest)
 sprintf("BP Test p-value: %.2f; SW Test p-value: %.2f ", bptest(mymodel)$p.value, 
         shapiro.test(mymodel$residuals)$p.value) 
